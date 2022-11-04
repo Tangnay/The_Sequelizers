@@ -13,7 +13,7 @@
 
 5. Use at least one new library, package, or technology that we haven’t discussed.
 
-6. Have a folder structure that meets the MVC paradigm.
+DONE---6. Have a folder structure that meets the MVC paradigm.
 
 7. Include authentication (express-session and cookies).
 
@@ -51,11 +51,11 @@
 
 21. Application should be a unique and novel idea.
 
-22. pplication deployed at live URL on Heroku and loads with no errors.
+22. Application deployed at live URL on Heroku and loads with no errors.
 
 * Application GitHub URL submitted.
 
-23. Repository has a unique name.
+DONE---23. Repository has a unique name.
 
 24.  Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
 
@@ -63,11 +63,9 @@
 
 26. Repository contains quality README file with description, screenshot, and link to deployed application.
 
-27. Your group should present using a slide deck.
+DONE---27. Your group should present using a slide deck.
 
-28. Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-29. Each member of your group** is required to submit the following for review:
+28. Each member of your group** is required to submit the following for review:
 
     -- The URL of the deployed application.
     -- The URL of the GitHub repository, with a unique name and a README describing the project.
