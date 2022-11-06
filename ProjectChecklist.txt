@@ -21,7 +21,7 @@ DONE---6. Have a folder structure that meets the MVC paradigm.
 
 9. Be deployed using Heroku (with data).
 
-10. Have a polished UI.
+DONE---10. Have a polished UI.
 
 11. Be responsive and interactive (i.e., accept and respond to user input).
 
@@ -49,7 +49,7 @@ DONE---6. Have a folder structure that meets the MVC paradigm.
 
 20. Application uses at least one new library, package, or technology not covered in class.
 
-21. Application should be a unique and novel idea.
+DONE---21. Application should be a unique and novel idea.
 
 22. Application deployed at live URL on Heroku and loads with no errors.
 
