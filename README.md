@@ -6,7 +6,8 @@
     
     - What was your motivation?
 
-    - We designed this webpage application to demonstrate our skills and display a real world application that allows users to look for and trade items in a simplistic, efficient way. 
+    - We designed this webpage application to demonstrate our skills and display a real world application that allows users to look for and trade items in a simplistic, efficient way.
+
     - This ultimately solves the problem of having random items that you would like to exchange, and give value to said items by making them available for trade with provided feedback and comments from users. 
 
     - What did you learn?
@@ -22,18 +23,28 @@
     
 ## Installation
     
-    What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+    ***(What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running)
+
+    First we created a project on GitHub, and each member git cloned the project repository into our local computers. Inside VS Code, we created all the files and folders using terminal commands, allowing us to separate the content within the directory. The json packages were created automatically after packages we needed for the project were installed using npm install commands in the terminal. 
     
 ## Usage
     
     Provide instructions and examples for use. Include screenshots as needed.
     
+## Screenshot 
+
     To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
     
         ```md
         ![alt text](assets/images/screenshot.png)
         ```
     
+## Link to Deployed Application & GitHub repository
+
+    GitHub repository: https://github.com/ggggglo/The_Sequelizers
+
+    Deployed Application: 
+
 ## Credits
     
     Tangnay Ou (https://github.com/Tangnay)
