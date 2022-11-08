@@ -42,3 +42,9 @@ table {
   color: #ebbe47;
   font-weight: 550;
 }
+#item-img {
+  width: 100%;
+}
+#item-pic {
+  margin-top: 80px;
+}
