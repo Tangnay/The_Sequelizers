@@ -1,0 +1,31 @@
+img {
+  width: 35%;
+}
+
+.logo-2 {
+  width: 20%;
+  position: absolute;
+}
+
+.nav-link {
+  color: #ebe6d8;
+  font-family: Menlo;
+}
+body {
+  background-color: #6fbeca;
+}
+
+#text {
+  font-family: Menlo;
+  color: #ebe6d8;
+}
+
+#item-list {
+  font-size: 32px;
+  color: #ebbe47;
+  font-family: Menlo;
+  text-align: center;
+}
+table {
+  margin-top: 70px;
+}
