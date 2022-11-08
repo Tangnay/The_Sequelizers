@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS trueque_db;
+
+CREATE DATABASE trueque_db;
