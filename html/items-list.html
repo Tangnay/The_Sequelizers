@@ -19,7 +19,7 @@
     />
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="../stylesheet/stylesheet.css"/>
+    <link rel="stylesheet" href="../stylesheet/stylesheet.css" />
   </head>
   <body>
     <nav>
@@ -43,7 +43,14 @@
     </nav>
 
     <div class="container text-center">
-      <p class="h1">RED SHOES</p>
+      <p class="h1" id="text">RED SHOES</p>
+      <p id="text">{{user} is looking for {{item}}</p>
+      <p id="text">willing to trade it for {{this item}}</p>
+      <p id="text">Do you have this item? let {{user}} know!</p>
+
+      <div class="input-group">
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
     </div>
   </body>
 </html>

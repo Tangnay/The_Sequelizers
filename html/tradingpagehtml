@@ -19,7 +19,9 @@
     />
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="/stylesheet/stylesheet.css" />
+    <link rel="stylesheet" href="../stylesheet/stylesheet.css" />
   </head>
-  <body></body>
+  <body>
+    <table class="table table-borderless" id="item-list"></table>
+  </body>
 </html>
