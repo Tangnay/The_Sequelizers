@@ -1,5 +1,3 @@
-//This is the route for Looking For//
-
 const router = require('express').Router();
 const {
     User,

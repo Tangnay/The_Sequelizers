@@ -1,4 +1,3 @@
-// This is the model for Looking For//
 const {
     Model,
     DataTypes
