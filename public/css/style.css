@@ -125,3 +125,10 @@ textarea{
   margin-top: 7px;
   font-size: 16px;
 }
+
+#item-img {
+  margin-top: 75px;
+  width: 100%;
+  border: 4px solid; 
+  border-color:#DD95B1; 
+}
