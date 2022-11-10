@@ -3,20 +3,25 @@ async function newFormHandler(event) {
 
     const title = document.querySelector('input[name="post-title"]').value;
     const post_content = document.querySelector('textarea[name="post-content"]').value.trim();
+    const file_upload = document.querySelector('#upload').files[0];
 
-    const response = await fetch(`/api/posts`, {
+    console.log(file_upload)
+
+    const response = await fetch(`/api/posts/upload`, {
         method: 'POST',
-        body: JSON.stringify({
-            title,
-            post_content
-        }),
+        body: 
+            // JSON.stringify({
+            // title,
+            // post_content,
+            file_upload
+        ,
         headers: {
             'Content-Type': 'application/json'
         }
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard');
+        // document.location.replace('/dashboard');
     } else {
         alert(response.statusText);
     }

@@ -8,6 +8,8 @@ const hbs = exphbs.create({helpers});
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// const morgan = require('morgan')
+
 const sess = {
     secret: 'test',
     cookie: {},
@@ -33,6 +35,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(routes);
+// app.use(morgan('dev'));
 
 sequelize.sync();
 

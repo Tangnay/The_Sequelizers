@@ -1,4 +1,22 @@
 const router = require('express').Router();
+const multer = require('multer');
+
+var storage = multer.diskStorage({
+    destination: function (req, file, callback) {
+      callback(null, 'uploads/');
+    },
+    filename: function (req, file, callback) {
+      callback(null, file.originalname);
+    },
+    onFileUploadStart: function(file, req, res){
+      if(req.files.file.length > 1000000000) {
+        return false;
+      }
+    }
+  });
+
+  const upload = multer({storage, limits:{fileSize:1000000000, fieldNameSize:10000000000}});
+
 const {
     User,
     Post,
@@ -73,7 +91,8 @@ router.post("/", withAuth, (req, res) => {
     Post.create({
             title: req.body.title,
             content: req.body.post_content,
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
+            image: req.body.image,
         })
         .then((dbPostData) => res.json(dbPostData))
         .catch((err) => {
@@ -81,6 +100,21 @@ router.post("/", withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
+
+router.post('/upload', upload.single('file_upload'), (req, res) => {
+    if (!req.file) {
+      console.log("No file received");
+      return res.send({
+        success: false
+      });
+  
+    } else {
+      console.log('file received');
+      return res.send({
+        success: true
+      })
+    }
+  });
 
 router.put("/:id", withAuth, (req, res) => {
     Post.update({
