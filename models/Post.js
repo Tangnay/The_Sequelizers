@@ -34,7 +34,11 @@ Post.init({
             model: 'user',
             key: 'id'
         }
-    }
+    },
+    image: { 
+        type: DataTypes.BLOB('long'), 
+        allowNull: true 
+      }
 }, {
     sequelize,
     freezeTableName: true,
