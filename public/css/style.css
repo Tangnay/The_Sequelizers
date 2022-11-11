@@ -69,10 +69,11 @@ h3 {
   font-family: Menlo;
   color: #ebe6d8;
   text-align: center;
-  size: 25px;
+  size: 30px;
   color: #dd95b1;
   border: none;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 #create-new-post {
@@ -88,6 +89,7 @@ input {
   font-family: Menlo;
   font-size: 15px;
 }
+
 #post-title {
   width: 400px;
 }

@@ -7,8 +7,7 @@ const exphbs = require('express-handlebars');
 const hbs = exphbs.create({helpers});
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
-// const morgan = require('morgan')
+const morgan = require('morgan')
 
 const sess = {
     secret: 'test',
@@ -34,7 +33,7 @@ app.use(express.json({limit: "10mb", extended: true}))
 app.use(express.urlencoded({limit: "10mb", extended: true, parameterLimit: 50000}))
 
 app.use(routes);
-// app.use(morgan('dev'));
+app.use(morgan('dev'));
 
 sequelize.sync();
 

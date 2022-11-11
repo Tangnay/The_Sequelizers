@@ -3,19 +3,21 @@ const multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, 'uploads/');
+      callback(null, '/uploads');
     },
     filename: function (req, file, callback) {
       callback(null, file.originalname);
     },
     onFileUploadStart: function(file, req, res){
+        console.log('made it here!')
       if(req.files.file.length > 1000000000) {
         return false;
       }
     }
   });
 
-  const upload = multer({storage, limits:{fileSize:1000000000, fieldNameSize:10000000000}});
+// const upload = multer({storage, limits:{fileSize:1000000000, fieldNameSize:10000000000}});
+const upload = multer();
 
 const {
     User,
@@ -101,7 +103,8 @@ router.post("/", withAuth, (req, res) => {
         });
 });
 
-router.post('/upload', upload.single('file_upload'), (req, res) => {
+router.post('/upload', upload.single('avatar'), (req, res) => {
+    console.log(req)
     if (!req.file) {
       console.log("No file received");
       return res.send({
