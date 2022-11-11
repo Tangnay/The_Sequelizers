@@ -3,7 +3,7 @@ const multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, '/uploads');
+      callback(null, 'uploads/');
     },
     filename: function (req, file, callback) {
       callback(null, file.originalname);
@@ -16,8 +16,8 @@ var storage = multer.diskStorage({
     }
   });
 
-// const upload = multer({storage, limits:{fileSize:1000000000, fieldNameSize:10000000000}});
-const upload = multer();
+const upload = multer({storage, limits:{fileSize:1000000000, fieldNameSize:10000000000}});
+//const upload = multer();
 
 const {
     User,
@@ -28,7 +28,7 @@ const withAuth = require('../../utils/auth');
 
 router.get("/", (req, res) => {
     Post.findAll({
-            attributes: ["id", "content", "title", "created_at"],
+            attributes: ["id", "content", "title", "image", "created_at"],
             order: [
                 ["created_at", "DESC"]
             ],
@@ -58,7 +58,7 @@ router.get("/:id", (req, res) => {
             where: {
                 id: req.params.id,
             },
-            attributes: ["id", "content", "title", "created_at"],
+            attributes: ["id", "content", "title", "image", "created_at"],
             include: [{
                     model: User,
                     attributes: ["username"],
@@ -88,36 +88,51 @@ router.get("/:id", (req, res) => {
         });
 });
 
-router.post("/", withAuth, (req, res) => {
-    console.log("creating");
-    Post.create({
-            title: req.body.title,
-            content: req.body.post_content,
-            user_id: req.session.user_id,
-            image: req.body.image,
-        })
-        .then((dbPostData) => res.json(dbPostData))
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
+// router.post("/", withAuth, (req, res) => {
+//     console.log("creating");
+//     Post.create({
+//             title: req.body.title,
+//             content: req.body.post_content,
+//             user_id: req.session.user_id,
+//             image: req.file,
+//         })
+//         .then((dbPostData) => res.json(dbPostData))
+//         .catch((err) => {
+//             console.log(err);
+//             res.status(500).json(err);
+//         });
+// });
 
-router.post('/upload', upload.single('avatar'), (req, res) => {
-    console.log(req)
+router.post('/upload', withAuth, upload.single('avatar'), async (req, res) => {
+    console.log(req.body)
+    console.log(req.file)
+
+    await Post.create({
+        title: req.body.post_title,
+        content: req.body.post_content,
+        user_id: req.session.user_id,
+        image: req.file,
+    })
+    .then((dbPostData) => res.json(dbPostData))
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+
     if (!req.file) {
       console.log("No file received");
       return res.send({
         success: false
       });
   
-    } else {
-      console.log('file received');
-      return res.send({
-        success: true
-      })
-    }
-  });
+    // } else {
+    //   console.log('file received');
+    //   return res.send({
+    //     success: true
+    //   })
+    // }
+    }    
+});
 
 router.put("/:id", withAuth, (req, res) => {
     Post.update({
