@@ -39,7 +39,8 @@ Post.init({
         type: DataTypes.BLOB('long'), 
         allowNull: true 
       }
-}, {
+}, 
+{
     sequelize,
     freezeTableName: true,
     underscored: true,
