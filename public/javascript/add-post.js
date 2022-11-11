@@ -10,18 +10,15 @@ async function newFormHandler(event) {
     const response = await fetch(`/api/posts/upload`, {
         method: 'POST',
         body: 
-            // JSON.stringify({
-            // title,
-            // post_content,
+            title, 
+            post_content,
             file_upload
-        ,
-        headers: {
-            'Content-Type': 'application/json'
-        }
     });
 
+    console.log(req)
+
     if (response.ok) {
-        // document.location.replace('/dashboard');
+        document.location.replace('/dashboard');
     } else {
         alert(response.statusText);
     }
