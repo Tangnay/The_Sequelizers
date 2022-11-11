@@ -1,8 +1,8 @@
 async function newFormHandler(event) {
     event.preventDefault();
 
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_content = document.querySelector('textarea[name="post-content"]').value.trim();
+    const title = document.querySelector('input[name="post_title"]').value;
+    const post_content = document.querySelector('textarea[name="post_content"]').value.trim();
     const file = document.querySelector('#upload').files[0];
 
     console.log(file)
@@ -18,10 +18,8 @@ async function newFormHandler(event) {
 
     const response = await fetch(`/api/posts/upload`, {
         method: 'POST',
-        data:
+        body:
         //  {
-            // title, 
-            // post_content,
             formData,
         // }
     //   headers: {

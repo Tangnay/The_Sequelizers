@@ -4,18 +4,18 @@
             <h2>Create New Looking For Post</h2>
         </div>
         <div class="form-section text-center">
-            <form class="new-post-form" id="upload_form">
+            <form class="new-post-form" id="upload_form" enctype="multipart/form-data">
                 <div class="post-title-section">
                     <label for="post-title" id="login">Title</label>
-                    <input type="text" id="post-title" name="post-title" placeholder="what are you looking for?"/>
+                    <input type="text" id="post-title" name="post_title" placeholder="what are you looking for?"/>
                 </div>
                 <div class="post-content">
                     <label for="post-content" id="login">Description</label>
-                    <textarea class="entry-field" id="post-content" name="post-content" placeholder="describe the item you are looking for!"></textarea>
+                    <textarea class="entry-field" id="post-content" name="post_content" placeholder="describe the item you are looking for!"></textarea>
                 </div>
                 <div class="post-content">
                     <label for="post-content" id="login">Image</label>
-                    <div action="/profile" method="post" enctype="multipart/form-data">
+                    {{!-- <div action="/profile" method="post" enctype="multipart/form-data"> --}}
                     <input type="file" name="avatar" id="upload"/>
                     </div>
                 </div>
