@@ -1,5 +1,3 @@
-<a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
-
 <article class="new-page">
     <section class="edit-form-page">
         <div class="form-heading">
@@ -7,22 +5,24 @@
                 Edit Post
             </h2>
         </div>
-        <div class="form-section">
+        <div class="form-section text-center">
             <form class="edit-post-form">
                 <div class="post-title-section">
-                    <label for="post-title">Title</label>
+                    <label for="post-title" id="login">Title</label>
                     <input type="text" name="post-title" id="post-title" value="{{post.title}}" />
                 </div>
                 <div class="post-content">
-                    <label for="post-content">Content</label>
+                    <label for="post-content" id="login">Content</label>
                     <textarea class="entry-field" id="post-content" name="post-content">{{post.content}}</textarea>
                 </div>
-                <button type="submit">Update post</button>
-                <button type="button" class="delete-post-btn">Delete post</button>
+                <button type="submit" class ="button" id="create-new-post">Update post</button>
+                <button type="button" class="delete-post-btn button" id="create-new-post">Delete post</button>
             </form>
+            <a href="/dashboard" class="go-back">Back to dashboard</a>
         </div>
     </section>
 </article>
+
 
 {{#if loggedIn}}
 <script src="/javascript/edit-post.js"></script>
