@@ -42,7 +42,7 @@ h1 {
   font-weight: 550;
 }
 
-h2{
+h2 {
   margin-top: 50px;
   font-family: Menlo;
   font-size: 32px;
@@ -51,48 +51,50 @@ h2{
   font-weight: 550;
 }
 
-h3{
+h3 {
   font-family: Menlo;
   font-size: 25px;
   font-weight: 550;
 }
 
-#login{
+#login {
   font-family: Menlo;
   color: #ebe6d8;
   text-align: center;
   size: 25px;
-  padding: 10px
+  padding: 10px;
 }
 
-#loginbtn{
+#loginbtn {
   font-family: Menlo;
   color: #ebe6d8;
   text-align: center;
-  size: 25px;
-  color: #DD95B1;
+  size: 30px;
+  color: #dd95b1;
   border: none;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
-#create-new-post{
+#create-new-post {
   font-family: Menlo;
   text-align: center;
-  color: #DD95B1;
+  color: #dd95b1;
   background-color: whitesmoke;
   margin-top: 60px;
 }
 
-input{
+input {
   border: none;
   font-family: Menlo;
   font-size: 15px;
 }
-#post-title{
+
+#post-title {
   width: 400px;
 }
 
-textarea{
+textarea {
   border: none;
   font-family: Menlo;
   font-size: 15px;
@@ -100,28 +102,47 @@ textarea{
   margin-top: 20px;
 }
 
-.post-title-section{
+.post-title-section {
   margin-top: 35px;
 }
 
-#edit-post{
-  
+#edit-post {
   text-align: center;
-  color: #DD95B1;
+  color: #dd95b1;
   background-color: whitesmoke;
   margin-top: 60px;
   padding: 10px;
 }
 
-.post{
+.post {
   font-family: Menlo;
 }
 
-.logout{
+.logout {
   background-color: #6fbeca;
   border: none;
   color: #ebe6d8;
   font-family: Menlo;
   margin-top: 7px;
   font-size: 16px;
+}
+
+#item-img {
+  margin-top: 75px;
+  width: 100%;
+  border: 4px solid;
+  border-color: #dd95b1;
+}
+
+.entry-field {
+  height: 40px;
+  border-radius: 06px;
+  margin-left: 16px;
+}
+
+.login-text {
+  font-size: 45px;
+  color: #ebe6d8;
+  font-family: Menlo;
+  margin-left: 16px;
 }

@@ -1,24 +1,44 @@
-<section class="text-center">
-    <div class="form-heading">
-        <h1>Log In</h1>
-    </div>
-    <div class="text-center">
-        <form class="login-form">
-            <div>
-                <label for="username-login" id="login">Username</label>
-                <input type="text" class="entry-field" id="username-login" />
-            </div>
-            <div>
-                <label for="password-login" id="login">Password</label>
-                <input type="password" class="entry-field" id="password-login" />
-            </div>
-            <div>
-                <button type="submit" class="login-signup-btn" id="loginbtn">Log In!</button>
-            </div>
-        </form>
-    </div>
+<section class="container">
+  <div class="form-heading">
+    <p class="login-text">LOGIN</p>
+  </div>
+  <div class="container text-center">
+    <form class="login-form">
+      <div class="row col-md-6">
+        <label
+          for="username"
+          class="col-sm-2 col-form-label"
+          id="login"
+        >Username</label>
+        <input type="text" class="entry-field" id="username-login" />
+      </div>
+      <div class="row col-md-6">
+        <label
+          for="Password"
+          class="col-sm-2 col-form-label"
+          id="login"
+        >Password</label>
+        <input type="password" class="entry-field" id="password-login" />
+      </div>
 
-    <a href="/signup" class="sign-in-link" class="text-center" id="login">sign up instead</a>
+      <div class="row col-md-6">
+        <label for="inputPassword3" class="col-sm-2 col-form-label"></label>
+        <button
+          type="submit"
+          class="btn btn-light entry-field"
+          id="loginbtn"
+        >LOGIN</button>
+
+        <a
+          href="/signup"
+          class="sign-in-link"
+          class="text-center"
+          id="login"
+        >sign up instead</a>
+      </div>
+    </form>
+  </div>
+
 </section>
 
 <script src="/javascript/login.js"></script>
