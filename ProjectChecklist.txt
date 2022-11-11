@@ -5,7 +5,7 @@
 
 1. Use Node.js and Express.js to create a RESTful API.
 
-2. Use Handlebars.js as the template engine.
+DONE---2. Use Handlebars.js as the template engine.
 
 3. Use MySQL and the Sequelize ORM for the database.
 
@@ -41,7 +41,7 @@ DONE---10. Have a polished UI.
 
 16. Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
 
-17. Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
+DONE---17. Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
 
 18. Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
 

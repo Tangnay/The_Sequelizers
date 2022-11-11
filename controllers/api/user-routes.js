@@ -4,6 +4,7 @@ const {
     Post,
     Comment
 } = require('../../models');
+const bcrypt = require('bcrypt');
 
 router.get('/', (req, res) => {
     User.findAll({
@@ -75,52 +76,87 @@ router.post('/', (req, res) => {
         });
 })
 
-router.post('/login', (req, res) => {
-    User.findOne({
-            where: {
-                username: req.body.username
-            }
-        })
-        .then(dbUserData => {
-            if (!dbUserData) {
-                res.status(400).json({
-                    message: 'No user with that username!'
-                });
-                return;
-            }
+// router.post('/login', async (req, res) => {
+//    const dbUserData = await User.findOne({
+//             where: {
+//                 username: req.body.username
+                
+//             }
+//         })
+//          try{
+//             if (!dbUserData) {
+//                 res.status(400).json({
+//                     message: 'No user with that username!'
+//                 });
+//                 return;
+//             }
 
-            req.session.save(() => {
-                req.session.user_id = dbUserData.id;
-                req.session.username = dbUserData.username;
-                req.session.loggedIn = true;
+//             req.session.save(() => {
+//                 req.session.user_id = dbUserData.id;
+//                 req.session.username = dbUserData.username;
+//                 req.session.loggedIn = true;
 
-                res.json({
-                    user: dbUserData,
-                    message: 'You are now logged in!'
-                });
-            });
+//                 res.json({
+//                     user: dbUserData,
+//                     message: 'You are now logged in!'
+//                 });
+//             });
 
-            const validPassword = dbUserData.checkPassword(req.body.password);
+//             const validPassword = dbUserData.checkPassword(req.body.password);
 
-            if (!validPassword) {
-                res.status(400).json({
-                    message: 'Incorrect password!'
-                });
-                return;
-            }
+//             if (!validPassword) {
+//                 res.status(400).json({
+//                     message: 'Incorrect password!'
+//                 });
+//                 return;
+//             }
 
-            req.session.save(() => {
-                req.session.user_id = dbUserData.id;
-                req.session.username = dbUserData.username;
-                req.session.loggedIn = true;
+//             req.session.save(() => {
+//                 req.session.user_id = dbUserData.id;
+//                 req.session.username = dbUserData.username;
+//                 req.session.loggedIn = true;
 
-                res.json({
-                    user: dbUserData,
-                    message: 'You are now logged in!'
-                });
-            });
-        });
-});
+//                 res.json({
+//                     user: dbUserData,
+//                     message: 'You are now logged in!'
+//                 });
+//             });
+//         }catch(err){res.status(500).json(err)}});
+router.post('/login', async (req, res) => {
+    try {
+      // we search the DB for a user with the provided email
+      const userData = await User.findOne({ where: { username: req.body.username } });
+     console.log(userData)
+      if (!userData) {
+        // the error message shouldn't specify if the login failed because of wrong email or password
+        res.status(404).json({ message: 'Login failed. Please try again!' });
+        return;
+      }
+      // use `bcrypt.compare()` to compare the provided password and the hashed password
+      const validPassword = await bcrypt.compare(
+        req.body.password,
+        userData.password
+      );
+      // if they do not match, return error message
+      if (!validPassword) {
+        res.status(400).json({ message: 'Login failed. Please try again!' });
+        return;
+      }
+      req.session.save(() =>{
+        req.session.user_id = userData.id;
+        req.session.username = userData.username;
+        req.session.loggedIn = true
+
+      });
+
+
+      // if they do match, return success message
+      res.status(200).json({ message: 'You are now logged in!' });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });  
+  
 
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {

@@ -13,6 +13,12 @@
                     <label for="post-content" id="login">Description</label>
                     <textarea class="entry-field" id="post-content" name="post-content" placeholder="describe the item you are looking for!"></textarea>
                 </div>
+                <div class="post-content">
+                    <label for="post-content" id="login">Image</label>
+                    <div action="/profile" method="post" enctype="multipart/form-data">
+                    <input type="file" name="avatar" />
+                    </div>
+                </div>
                 <button type="submit" class="btn" id="create-new-post">+ Create +</button>
             </form>
         </div>
