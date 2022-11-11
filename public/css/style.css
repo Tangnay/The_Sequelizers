@@ -78,7 +78,6 @@ h3 {
 
 #create-new-post {
   font-family: Menlo;
-  text-align: center;
   color: #dd95b1;
   background-color: whitesmoke;
   margin-top: 60px;
@@ -88,6 +87,7 @@ input {
   border: none;
   font-family: Menlo;
   font-size: 15px;
+  border-radius: 5px;
 }
 
 #post-title {
@@ -146,3 +146,46 @@ textarea {
   font-family: Menlo;
   margin-left: 16px;
 }
+
+.post{
+  padding-top: 50px;
+}
+
+.links{
+  font-size: 20px;
+  color: whitesmoke;
+  background-color: #dd95b1;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.content-section{
+  margin-top: 10px;
+  color: #ebe6d8;
+}
+
+#comment-subtitle{
+  font-size: smaller;
+  color: dimgray;
+}
+
+#edit{
+  font-family: Menlo;
+  font-size: smaller;
+  color: whitesmoke;
+}
+
+.button{
+  border: none;
+  border-radius: 2px;
+}
+
+.go-back{
+  font-family: Menlo;
+  color: whitesmoke;
+}
+
+#post-content{
+  height: 70px;
+}
+
