@@ -121,7 +121,8 @@ router.post('/', (req, res) => {
 //                     message: 'You are now logged in!'
 //                 });
 //             });
-//         }catch(err){res.status(500).json(err)}});
+//         }catch(err){res.status(500).json(err)}});\
+
 router.post('/login', async (req, res) => {
     try {
       // we search the DB for a user with the provided email
@@ -142,13 +143,13 @@ router.post('/login', async (req, res) => {
         res.status(400).json({ message: 'Login failed. Please try again!' });
         return;
       }
+
       req.session.save(() =>{
         req.session.user_id = userData.id;
         req.session.username = userData.username;
         req.session.loggedIn = true
 
       });
-
 
       // if they do match, return success message
       res.status(200).json({ message: 'You are now logged in!' });
@@ -157,7 +158,7 @@ router.post('/login', async (req, res) => {
     }
   });  
   
-
+  
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {

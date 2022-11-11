@@ -8,6 +8,8 @@ const hbs = exphbs.create({helpers});
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// const morgan = require('morgan')
+
 const sess = {
     secret: 'test',
     cookie: {},
@@ -28,11 +30,11 @@ app.set('view engine', 'handlebars');
 
 app.use(session(sess));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(express.json({limit: "10mb", extended: true}))
+app.use(express.urlencoded({limit: "10mb", extended: true, parameterLimit: 50000}))
+
 app.use(routes);
+// app.use(morgan('dev'));
 
 sequelize.sync();
 
