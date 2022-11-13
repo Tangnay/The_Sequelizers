@@ -49,6 +49,7 @@ h2 {
   text-align: center;
   color: #ebbe47;
   font-weight: 550;
+  text-decoration: none;
 }
 
 h3 {
@@ -189,3 +190,6 @@ textarea {
   height: 70px;
 }
 
+.comments{
+  margin-left: 500px;
+}
