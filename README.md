@@ -9,10 +9,13 @@
 - Trueque allows consumers an opportunity to halt their contribution to pollution by exchanging items they might throw away for items they might want.
     
 ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Web] (#web)
+- [Links] (#links)
+- [Credits](#credits)
+- [License](#license)
+- [Badges](#badges)
     
 ## Installation
 - From the command line:
@@ -41,7 +44,7 @@
             - What would you like in exchange?
             
     
-## Screenshot 
+## Web 
 
     To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
     
@@ -49,7 +52,7 @@
         ![alt text](assets/images/screenshot.png)
         ```
     
-## Link to Deployed Application & GitHub repository
+## Links
 - GitHub repository: https://github.com/ggggglo/The_Sequelizers
 
 - Deployed Application: 
@@ -72,3 +75,8 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+## Badges
+
+[![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
+[![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
