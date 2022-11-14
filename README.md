@@ -11,8 +11,8 @@
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Web] (#web)
-- [Links] (#links)
+- [Web](#web)
+- [Links](#links)
 - [Credits](#credits)
 - [License](#license)
 - [Badges](#badges)
