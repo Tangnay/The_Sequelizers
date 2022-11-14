@@ -1,35 +1,45 @@
-# <The_Sequelizers>
+# Trueque
+`One mans trash is another mans treasure`
 
 ## Description
-    
-    Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-    
-    - What was your motivation?
+- Trueque was designed and developed with Earth in mind: 
+    - We are all well aware of the climate crisis we are currently living and how industries like fashion are main actors in this crisis.
+    - We are also human, and as humans we find joy in new things, in wanting things and getting them.
 
-    - We designed this webpage application to demonstrate our skills and display a real world application that allows users to look for and trade items in a simplistic, efficient way.
-
-    - This ultimately solves the problem of having random items that you would like to exchange, and give value to said items by making them available for trade with provided feedback and comments from users. 
-
-    - What did you learn?
+- Trueque allows consumers an opportunity to halt their contribution to pollution by exchanging items they might throw away for items they might want.
     
-## Table of Contents (Optional)
-    
-    If your README is long, add a table of contents to make it easy for users to find what they need.
-    
+## Table of Contents
     - [Installation](#installation)
     - [Usage](#usage)
     - [Credits](#credits)
     - [License](#license)
     
 ## Installation
-    
-    ***(What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running)
-
-    First we created a project on GitHub, and each member git cloned the project repository into our local computers. Inside VS Code, we created all the files and folders using terminal commands, allowing us to separate the content within the directory. The json packages were created automatically after packages we needed for the project were installed using npm install commands in the terminal. 
+- From the command line:
+    - Run `npm i` to install all required packages
+    - Create a .env file with the following code:
+        - DB_NAME='trueque_db'
+        - DB_USER= `your mysql2 user`
+        - DB_PW= `your mysql2 password`
+    - Run `npm run start`
+    - In your browser go to `http://localhost:3001/`
+    - Enjoy Trueque!
     
 ## Usage
-    
-    Provide instructions and examples for use. Include screenshots as needed.
+- Once the application is running:
+    - Log into `Trueque` using the `Log In` or `Sign Up` buttons
+    - Browse what people are `Trading For` by clicking on Trading For:
+        - Comment if you'd like to trade for!
+    - Browse what people are `Looking For` by clicking on Looking For:
+        - Comment if you have what people are looking for!
+    - Create a new Trading For by clicking on `Create New Trading For`:
+        - Provide a `Title` for your post
+        - Provide a `Description` of your item:
+            - Used or new?
+            - What color? 
+            - What year?
+            - What would you like in exchange?
+            
     
 ## Screenshot 
 
@@ -40,43 +50,25 @@
         ```
     
 ## Link to Deployed Application & GitHub repository
+- GitHub repository: https://github.com/ggggglo/The_Sequelizers
 
-    GitHub repository: https://github.com/ggggglo/The_Sequelizers
-
-    Deployed Application: 
+- Deployed Application: 
 
 ## Credits
-    
-    Tangnay Ou (https://github.com/Tangnay)
 
-    Reginald Pitts (https://github.com/truthsrebirth)
-
-    Gloriana Gonzalez (https://github.com/ggggglo)
-
-    Josue Hernandez (https://github.com/josuehp24)
+- Tangnay Ou (https://github.com/Tangnay)
+- Reginald Pitts (https://github.com/truthsrebirth)
+- Gloriana Gonzalez (https://github.com/ggggglo)
+- Josue Hernandez (https://github.com/josuehp24)
     
 ## License
-    
-    The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-    
-    ---
-    
-    🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-    
-## Badges
-    
-    ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-    
-    Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-    
-## Features
-    
-    If your project has a lot of features, list them here.
-    
-## How to Contribute
-    
-    If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-    
-## Tests
-    
-    Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+MIT License
+
+Copyright (c) [2022] [Trueque]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
