@@ -3,7 +3,7 @@ const multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, 'uploads/');
+      callback(null, 'public/');
     },
     filename: function (req, file, callback) {
       callback(null, file.originalname);
@@ -111,7 +111,7 @@ router.post('/upload', withAuth, upload.single('avatar'), async (req, res) => {
         title: req.body.post_title,
         content: req.body.post_content,
         user_id: req.session.user_id,
-        image: req.file,
+        image: req.file.filename
     })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
@@ -138,7 +138,7 @@ router.put("/:id", withAuth, (req, res) => {
     Post.update({
             title: req.body.title,
             content: req.body.post_content,
-            image: req.file
+            image: req.file.path
         }, {
             where: {
                 id: req.params.id,
