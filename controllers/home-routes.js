@@ -6,14 +6,21 @@ const {
     Comment
 } = require('../models');
 
-
 router.get('/', (req, res) => {
+    res.render('homepage', {
+        loggedIn: req.session.loggedIn
+    });
+});
+
+
+router.get('/users-posts', (req, res) => {
     Post.findAll({
             attributes: [
                 'id',
                 'title',
                 'content',
-                'created_at'
+                'created_at',
+                'image'
             ],
             include: [{
                     model: Comment,
@@ -34,7 +41,9 @@ router.get('/', (req, res) => {
                 plain: true
             }));
 
-            res.render('homepage', {
+            console.log(posts);
+
+            res.render('users-posts', {
                 posts,
                 loggedIn: req.session.loggedIn
             });
@@ -44,6 +53,7 @@ router.get('/', (req, res) => {
             res.status(500).json(err);
         });
 });
+
 
 router.get('/post/:id', (req, res) => {
     Post.findOne({
