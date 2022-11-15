@@ -36,7 +36,7 @@ Post.init({
         }
     },
     image: { 
-        type: DataTypes.BLOB('long'), 
+        type: DataTypes.STRING, 
         allowNull: true 
       }
 }, 

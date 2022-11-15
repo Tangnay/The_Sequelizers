@@ -111,7 +111,7 @@ router.post('/upload', withAuth, upload.single('avatar'), async (req, res) => {
         title: req.body.post_title,
         content: req.body.post_content,
         user_id: req.session.user_id,
-        image: req.file.body
+        image: req.file.filename
     })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
