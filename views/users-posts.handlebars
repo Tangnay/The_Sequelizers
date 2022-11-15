@@ -1,16 +1,16 @@
 {{!-- When the user clicks on "Trading For" on the homepage, it redirects to a new handlebar page that displays all of the users posts  --}}
 
-<h2>Users Posts</h2>
+<h2>What people are trading</h2>
 
-<ul class="post-list">
+<div class="post-list">
     {{#each posts as |post|}}
-    <li>
+    <div>
         {{> post-info post }}
-    </li>
-    <li><a href="/post-info/{{ id }}"></a></li>
-    <li></li>
-    <li></li>
+    </div>
+    <div><a href="/post-info/{{ id }}"></a></div>
+    <div></div>
+    <div></div>
     {{/each}}
 
-</ul>
+</div>
 

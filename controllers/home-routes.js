@@ -19,8 +19,9 @@ router.get('/users-posts', (req, res) => {
                 'id',
                 'title',
                 'content',
+                'image',
                 'created_at',
-                'image' // added attribute referenced from post.js
+                
             ],
             include: [{
                     model: Comment,
@@ -64,6 +65,7 @@ router.get('/post/:id', (req, res) => {
                 'id',
                 'title',
                 'content',
+                'image',
                 'created_at'
             ],
             include: [{
