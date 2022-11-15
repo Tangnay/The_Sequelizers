@@ -55,7 +55,7 @@
 ## Links
 - GitHub repository: https://github.com/ggggglo/The_Sequelizers
 
-- Deployed Application: 
+- Deployed Application: https://the-sequelizers.herokuapp.com/
 
 ## Credits
 
