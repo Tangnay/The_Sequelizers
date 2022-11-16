@@ -45,13 +45,12 @@
             
     
 ## Web 
-
-    To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    
-        ```md
-        ![alt text](assets/images/screenshot.png)
-        ```
-    
+![Homepage](./public/images/1.png)
+![Login](./public/images/2.png)
+![Posts](./public/images/3.png)
+![Posts](./public/images/4.png)
+![Posts](./public/images/5.png)
+![Create a Post](./public/images/6.png)
 ## Links
 - GitHub repository: https://github.com/ggggglo/The_Sequelizers
 

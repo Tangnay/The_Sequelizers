@@ -193,6 +193,24 @@ textarea {
 .comments{
   margin-left: 500px;
 }
+
 a{
   text-decoration: none;
+}
+
+.meta {
+  font-family: Menlo;
+}
+
+.meta, #comment-text{
+  font-family: Menlo;
+  background-color: whitesmoke;
+}
+
+#comment-text{
+  color: #dd95b1;
+}
+
+#date{
+  font-size: 12px;
 }
