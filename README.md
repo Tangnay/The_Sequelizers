@@ -12,6 +12,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Web](#web)
+- [Future Development](#development)
 - [Links](#links)
 - [Credits](#credits)
 - [License](#license)
@@ -51,6 +52,14 @@
 ![Posts](./public/images/4.png)
 ![Posts](./public/images/5.png)
 ![Create a Post](./public/images/6.png)
+
+## Future Development
+- Location for posts. `This post is near Austin, TX`
+- Reward system. `The more you trade, the more you win`
+- Notifications. `David might have the item you're looking for!`
+- Filters by category
+- Looking for page
+
 ## Links
 - GitHub repository: https://github.com/ggggglo/The_Sequelizers
 
