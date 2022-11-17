@@ -12,7 +12,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Web](#web)
-- [Future Development](#development)
+- [Future Development](#future development)
 - [Links](#links)
 - [Credits](#credits)
 - [License](#license)
